@@ -1,0 +1,161 @@
+.container {
+  padding: clamp(40px, 6vw, 80px) var(--pad-page);
+  max-width: min(600px, 100%);
+  margin: 0 auto;
+}
+
+.progressBar {
+  height: 6px;
+  background-color: var(--border-color);
+  border-radius: 3px;
+  margin-bottom: clamp(32px, 5vw, 60px);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--primary);
+  transition: width 0.3s ease-out;
+}
+
+.content {
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  margin-bottom: clamp(16px, 2.5vw, 24px);
+}
+
+.desc {
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.highlight {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.blueText {
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.savingCard {
+  background: var(--card-bg);
+  border-radius: clamp(16px, 2vw, 20px);
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid var(--border-color);
+  margin-bottom: clamp(24px, 4vw, 40px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.savingLabel {
+  font-size: clamp(13px, 1.3vw, 14px);
+  color: var(--text-sub);
+  margin-bottom: 12px;
+}
+
+.savingValue {
+  font-size: clamp(32px, 5vw, 42px);
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.mainButton {
+  display: block;
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  padding: clamp(14px, 2vw, 18px);
+  border-radius: clamp(10px, 1.2vw, 12px);
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.termsList {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vw, 16px);
+  margin-bottom: clamp(24px, 4vw, 40px);
+  background: var(--card-bg);
+  padding: clamp(16px, 2.5vw, 24px);
+  border-radius: clamp(10px, 1.2vw, 12px);
+}
+
+.termItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(14px, 1.4vw, 15px);
+  font-weight: 500;
+}
+
+.termItem input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.infoTable {
+  background: var(--card-bg);
+  border-radius: clamp(10px, 1.2vw, 12px);
+  padding: clamp(16px, 2.5vw, 24px);
+  margin-bottom: clamp(24px, 4vw, 40px);
+  text-align: left;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: clamp(12px, 1.5vw, 16px) 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: clamp(14px, 1.4vw, 15px);
+  color: var(--text-sub);
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoVal {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.successIcon {
+  font-size: clamp(60px, 8vw, 80px);
+  margin-bottom: clamp(16px, 2.5vw, 24px);
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subButton {
+  display: block;
+  width: 100%;
+  background-color: var(--border-color);
+  color: var(--text-sub);
+  padding: clamp(14px, 2vw, 18px);
+  border-radius: clamp(10px, 1.2vw, 12px);
+  font-size: clamp(15px, 1.6vw, 16px);
+  font-weight: 700;
+  text-align: center;
+}
