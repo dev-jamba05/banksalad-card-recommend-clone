@@ -1,0 +1,141 @@
+.container {
+  padding: clamp(20px, 3vw, 40px) var(--pad-page);
+  max-width: min(1100px, 100%);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: clamp(20px, 2.5vw, 30px);
+}
+
+.title {
+  font-size: clamp(22px, 2.8vw, 28px);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-sub);
+  font-size: clamp(13px, 1.3vw, 14px);
+}
+
+/* auto-fit: 화면이 좁아지면 자동으로 1열 전환 */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: var(--pad-card);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.cardLabel {
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--text-sub);
+  margin-bottom: clamp(8px, 1.2vw, 12px);
+}
+
+.totalAmount {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: clamp(8px, 1.2vw, 12px);
+}
+
+.comparison {
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--text-sub);
+}
+
+.highlight {
+  font-weight: 700;
+  color: #ff4d4f;
+}
+
+.insightCard {
+  background-color: var(--item-hover);
+  color: var(--text-main);
+}
+
+.insightCard .cardLabel {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.insightText {
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.6;
+}
+
+.increaseText {
+  color: #3a82ee;
+  font-weight: 800;
+}
+
+.cardTitle {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 700;
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 1vw, 10px);
+}
+
+.catHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catName {
+  font-weight: 700;
+  font-size: clamp(14px, 1.4vw, 15px);
+}
+
+.catAmount {
+  font-weight: 700;
+  font-size: clamp(14px, 1.4vw, 15px);
+}
+
+.progressBar {
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.subCategoryList {
+  margin-top: 4px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subCategoryItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--text-sub);
+}

@@ -1,0 +1,215 @@
+.container {
+  padding: clamp(20px, 3vw, 40px) var(--pad-page);
+  max-width: min(1400px, 100%);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: clamp(24px, 3.5vw, 40px);
+}
+
+.title {
+  font-size: clamp(22px, 2.8vw, 28px);
+  font-weight: 800;
+  margin-bottom: clamp(8px, 1vw, 12px);
+}
+
+.subtitle {
+  color: var(--text-sub);
+  font-size: clamp(13px, 1.3vw, 15px);
+  line-height: 1.6;
+}
+
+.diagnosisBox {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: var(--pad-card);
+  margin-bottom: clamp(24px, 3.5vw, 40px);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1vw, 12px);
+  position: relative;
+}
+
+.diagnosisLabel {
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.diagnosisTitle {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 800;
+}
+
+.highlight {
+  color: var(--secondary);
+}
+
+.statBox {
+  position: absolute;
+  right: var(--pad-card);
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+/* 좁은 화면에서 absolute 해제 */
+@media (max-width: 600px) {
+  .statBox {
+    position: static;
+    transform: none;
+    text-align: left;
+    margin-top: 8px;
+  }
+}
+
+.statLabel {
+  display: block;
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--text-sub);
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 800;
+}
+
+/* auto-fit: 카드 폭이 충분하면 2열, 좁으면 1열로 자동 전환 */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+  gap: clamp(20px, 2.5vw, 30px);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: clamp(16px, 2vw, 20px);
+  padding: var(--pad-card);
+  border: 1px solid var(--border-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bestCard {
+  border: 2px solid var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 186, 113, 0.1);
+}
+
+.bestBadge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: clamp(11px, 1vw, 12px);
+  font-weight: 700;
+}
+
+.cardInfo {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 20px);
+  margin-bottom: clamp(20px, 2.5vw, 30px);
+}
+
+.cardVisual {
+  width: clamp(72px, 8vw, 100px);
+  height: clamp(101px, 11.2vw, 140px);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.brand {
+  font-size: clamp(12px, 1.1vw, 13px);
+  color: var(--text-sub);
+}
+
+.cardName {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.savingBox {
+  background-color: var(--background);
+  padding: clamp(14px, 1.8vw, 20px);
+  border-radius: clamp(10px, 1.2vw, 12px);
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.savingLabel {
+  font-size: clamp(11px, 1vw, 12px);
+  color: var(--text-sub);
+  margin-bottom: 8px;
+}
+
+.savingValue {
+  font-size: clamp(18px, 2vw, 20px);
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.benefitSummary {
+  flex: 1;
+}
+
+.benefitTitle {
+  font-size: clamp(13px, 1.3vw, 14px);
+  font-weight: 700;
+  margin-bottom: clamp(8px, 1.2vw, 12px);
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 12px);
+  margin-bottom: 10px;
+}
+
+.benefitCat {
+  font-size: clamp(10px, 1vw, 11px);
+  font-weight: 700;
+  color: var(--primary);
+  background-color: #e6f7ef;
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.benefitDesc {
+  font-size: clamp(12px, 1.2vw, 13px);
+  color: var(--text-sub);
+}
+
+.applyButton {
+  display: block;
+  width: 100%;
+  padding: clamp(13px, 1.5vw, 16px);
+  background-color: var(--border-color);
+  color: var(--text-main);
+  text-align: center;
+  border-radius: clamp(10px, 1.2vw, 12px);
+  font-weight: 700;
+  font-size: clamp(14px, 1.3vw, 15px);
+  margin-top: clamp(20px, 2.5vw, 30px);
+  transition: all 0.2s;
+}
+
+.bestCard .applyButton {
+  background-color: var(--primary);
+  color: white;
+}
+
+.applyButton:hover {
+  filter: brightness(0.95);
+}

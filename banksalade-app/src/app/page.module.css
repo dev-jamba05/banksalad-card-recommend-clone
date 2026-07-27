@@ -1,0 +1,201 @@
+.container {
+  padding: clamp(20px, 3vw, 40px) var(--pad-page);
+  max-width: min(1400px, 100%);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 12px);
+}
+
+.emoji {
+  font-size: clamp(20px, 2.5vw, 24px);
+}
+
+.title {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+}
+
+.userInfo {
+  text-align: right;
+}
+
+.userName {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(13px, 1.3vw, 15px);
+}
+
+.statusLabel {
+  font-size: clamp(10px, 1vw, 11px);
+  color: var(--text-sub);
+}
+
+/* 사이드바 너비를 뷰포트에 따라 자동 조정, 900px 미만이면 1열로 */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr clamp(260px, 22vw, 380px);
+  gap: var(--gap);
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: var(--pad-card);
+  margin-bottom: var(--gap);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(12px, 1.5vw, 16px);
+}
+
+.badge {
+  background-color: var(--badge-bg);
+  color: var(--text-main);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: clamp(12px, 1.1vw, 13px);
+  font-weight: 700;
+}
+
+.insightText {
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.cardTitle {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 700;
+}
+
+.subText {
+  font-size: clamp(11px, 1vw, 12px);
+  color: var(--text-sub);
+}
+
+.transactionList {
+  display: flex;
+  flex-direction: column;
+}
+
+.transactionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(14px, 2vw, 20px) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.transactionItem:last-child {
+  border-bottom: none;
+}
+
+.tLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.date {
+  font-size: clamp(11px, 1vw, 12px);
+  color: var(--text-sub);
+}
+
+.nameGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tName {
+  font-weight: 600;
+  font-size: clamp(14px, 1.4vw, 16px);
+}
+
+.categoryBadge {
+  background-color: var(--badge-bg);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: clamp(10px, 1vw, 11px);
+  color: var(--badge-text);
+}
+
+.amount {
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.positive {
+  color: var(--secondary);
+}
+
+.expenseAmount {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  margin: clamp(10px, 1.5vw, 16px) 0;
+}
+
+.progressBar {
+  height: clamp(8px, 1vw, 12px);
+  background-color: var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.recommendCard {
+  background-color: var(--item-hover);
+  border: none;
+}
+
+.recommendDesc {
+  font-size: clamp(13px, 1.3vw, 14px);
+  color: var(--text-sub);
+  line-height: 1.5;
+  margin-bottom: clamp(16px, 2.5vw, 24px);
+}
+
+.actionButton {
+  display: block;
+  width: 100%;
+  background-color: #3a82ee;
+  color: white;
+  text-align: center;
+  padding: clamp(14px, 1.5vw, 16px);
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: clamp(15px, 1.4vw, 16px);
+  transition: opacity 0.2s;
+}
+
+.actionButton:hover {
+  opacity: 0.9;
+}

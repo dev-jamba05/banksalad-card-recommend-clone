@@ -1,0 +1,41 @@
+# dependencies
+node_modules/
+banksalade-app/node_modules/
+
+# next.js
+.next/
+banksalade-app/.next/
+
+# build
+build/
+dist/
+
+# local env files
+.env*.local
+banksalade-app/.env*.local
+
+# typescript build info
+*.tsbuildinfo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Misc
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
