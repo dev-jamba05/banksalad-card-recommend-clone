@@ -105,4 +105,4 @@ N --> O[소비 패턴 개선 / 카드 변경]
 도출된 KPI 수치들은 너무 높아서 비현실적이거나 너무 낮아서 경쟁력이 떨어지지 않도록, **실제 서비스 평균 데이터, 금융 앱 특성, 사용자 행동 패턴**을 모두 종합하여 설정한 **'도전적이면서도 현실적인 목표'**입니다.
 
 ---
-GitHub 레포지토리: https://github.com/dev-jamba05/BankSalade
+GitHub 레포지토리: https://github.com/dev-jamba05/banksalad-card-recommend
