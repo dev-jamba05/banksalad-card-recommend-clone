@@ -56,5 +56,7 @@ npm run dev
 ---
 
 배포 주소 : http://banksalade-card.kro.kr/
+
 GitHub 레포지토리 : https://github.com/dev-jamba05/banksalad-card-recommend
+
 과제를 진행하며 1인 개발로 처음부터 끝까지 만들어보면서 기획과 개발의 연결고리를 많이 배웠습니다. 피드백 언제나 환영합니다!
